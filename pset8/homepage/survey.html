@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Survey</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script>
+            function formsubmit()
+            {
+                let name = document.querySelector("#name").value;
+                if (name == "")
+                {
+                    alert("Error, please input a name and resubmit.")
+                }
+                else
+                {
+                    alert("Thank you " + name + " for your feedback.")
+                }
+            }
+        </script>
+
+    </head>
+    <body>
+        <div class="header">
+            <h1>Whistler-Info</h1>
+        </div>
+        <!-- bootstrap nav bar -->
+        <nav class="navbar navbar-dark bg-dark">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">W-I</a>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/winter.html">Winter</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/summer.html">Summer</a>
+                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/survey.html">Survey</a>
+                    </li>
+                </ul>
+              </div>
+        </nav>
+        <div class="main">
+            <h2>Survey</h2>
+            <img src="/images/garibaldi.jpg" alt="garibaldi">
+            <div class id ="surveyform">
+                <p>If you would like to inform us of your favourite ski run in the Whistler Blackcomb area
+                    please fill in the form below:
+                </p>
+
+                <form onsubmit="formsubmit(); return false;">
+                    Name:<br>
+                    <input type="text" id="name">
+                    <br>
+                    Ski Run:<br>
+                    <input type="text" name="ski_run">
+                    <br><br>
+                    <input type="submit">
+                    <br><br>
+                </form>
+            </div>
+        </div>
+        <div class id="footer">
+            <p>Created by Tom</p>
+        </div>
+        <!-- JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>

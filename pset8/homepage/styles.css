@@ -1,0 +1,59 @@
+/* Applies a zero margin to all elements */
+* {
+    font: Helvetica;
+}
+
+/* Styles the body */
+body{
+    background: black;
+}
+
+/* Header Title*/
+.header {
+    padding: 40px;
+    text-align: center;
+    background: black;
+}
+.header h1 {
+    font-size: 40px;
+    color: white;
+}
+
+/*Styles h2 h3 and p*/
+h2 {
+    font-size: 30px;
+    color: white;
+    text-decoration: underline;
+}
+
+/* Styles main text body of the page */
+.main {
+    padding: 20px;
+    color: orange;
+}
+
+ul + h3 {
+    font-size: 15px;
+    color: blue;
+}
+
+a:link {
+    color: purple;
+}
+a:visted {
+    color: orange;
+}
+
+img {
+    padding: 20px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Styles footers */
+#footer {
+    text-align: center;
+    background: grey;
+    color: white;
+    font-style: italic;
+}

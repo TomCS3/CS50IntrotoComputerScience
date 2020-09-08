@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+<table style="width:100%">
+    <thead>
+        <tr>
+            <th scope="col">Stock</th>
+            <th scope="col">Shares</th>
+            <th scope="col">Price ($)</th>
+            <th scope="col">Total Value ($)</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for stock in portfolio %}
+        <tr>
+            <td scope="row">{{ stock['stock'] }}</td>
+            <td scope="row">{{ stock['shares'] }}</td>
+            <td scope="row">{{ stock['price'] }}</td>
+            <td scope="row">{{ stock['valuation'] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<br><br>
+
+<table style="width:100%">
+    <thead>
+        <tr>
+            <th scope="col">Cash Balance ($)</th>
+            <th scope="col">Stocks Balance ($)</th>
+            <th scope="col">Total Balance ($)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td scope="row">{{ cash }}</td>
+            <td scope="row">{{ total_stocks_value }}</td>
+            <td scope="row">{{ total }}</td>
+        </tr>
+    </tbody>
+</table>
+{% endblock %}
